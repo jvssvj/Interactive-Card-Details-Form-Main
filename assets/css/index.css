@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --LinearGradient: hsl(249, 99%, 64%),hsl(278, 94%, 30%);
+    --Red-InputErrors: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 3%, 87%);
+    --Dark-Grayish-Violet: hsl(279, 6%, 55%);
+    --Very-Dark-Violet: hsl(278, 68%, 11%);
+}
+
+body, #confirm-btn, ::placeholder {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.background_image {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 38%;
+    height: 100%;
+}
+
+.background_image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card_images {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#card-front {
+    margin-right: 10em;
+}
+
+#card-back {
+    margin-top: 2em;
+}
+
+#card-front, #card-back {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: .6rem;
+}
+
+.preview_card, #card-logo, #cvv-preview {
+    position: absolute;
+    color: var(--White);
+    z-index: 1;
+}
+
+#card-logo {
+    margin: 1.4em 0em 0em -26em;
+}
+
+.preview_card {
+    display: flex;
+    flex-direction: column;
+    margin: 8em 0em 0em -9.5em;
+    width: 100%;
+    max-width: 380px;
+}
+
+.flex_name_date_preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3.2em;
+    max-width: 375px;
+}
+
+#name-preview, #month-preview, #year-preview, #cvv-preview  {
+    font-size: .9rem;
+}
+
+#number-preview{
+    position: absolute;
+    font-size: 1.7rem;
+    letter-spacing: .2rem;
+}
+
+#cvv-preview {
+    margin: 17.2em 0em 0em 28.7em;
+}
+
+.card_information {
+    width: 100%;
+    max-width: 350px;
+}
+
+.div_card_name, .div_card_number, .exp_date, .cvv  {
+    display: flex;
+    flex-direction: column;
+}
+
+.div_date_card_cvv {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+input[type="text"], input[type="number"]  {
+    height: 45px;
+    border: .1rem solid var(--Light-Grayish-Violet);
+    border-radius: .3rem;
+    margin-top: .5rem;
+    padding-left: 1.3rem;
+    cursor: pointer;
+}
+
+input[type="text"]:focus, input[type="number"]:focus  {
+    outline: none;
+    border: .1rem solid hsl(249, 99%, 64%);
+    border-radius: .3rem;
+    border-image-slice: 1;
+}
+
+::placeholder {
+    font-size: 1rem;
+    color: var(--Light-Grayish-Violet);
+}
+
+label {
+    margin-top: 1rem;
+    color: var(--Very-Dark-Violet);
+    font-size: .7rem;
+}
+
+.exp_date input {
+    width: 100%;
+    max-width: 78px;
+}
+
+.month_year {
+    display: flex;
+    align-items: center;
+}
+
+.cvv input {
+    max-width: 170px;
+}
+
+input[type="button"] {
+    width: 100%;
+    height: 45px;
+    margin-top: 2.5em;
+    border-radius: .3rem;
+    background-color: var(--Very-Dark-Violet);
+    color: var(--White);
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="button"]:active {
+    transform: scale(0.92);
+}
+
+.error {
+    display: none;
+    position: absolute;
+    margin-top: 4.3em;
+}
+
+.error span {
+    font-size: .7rem;
+    color: var(--Red-InputErrors);
+}
+
+.thanks {
+    display: none;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.thanks h1 {
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+.thanks p {
+    color: var(--Dark-Grayish-Violet);
+}
+
+.thanks h1, #name-preview, #month-preview, #year-preview, label, #cvv-preview {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: .8rem;
+    padding: .3rem;
+}
+
+.attribution p {
+    color: var(--Very-Dark-Violet);
+}
+
+.attribution a {
+    color: hsl(249, 99%, 64%);
+}

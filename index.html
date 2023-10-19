@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/indexResponsive.css">
+  <script src="assets/js/index.js" defer></script>
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+
+</head>
+<body>
+  <picture class="background_image">
+    <source media="(max-width:990px)" srcset="assets/images/bg-main-mobile.png" type="image/png">
+    <img src="assets/images/bg-main-desktop.png" alt="Background Image">
+  </picture>
+  <section class="card_images">
+    <img id="card-logo" src="assets/images/card-logo.svg" alt="Logo Card">
+    <div class="preview_card">
+      <span id="number-preview">0000 0000 0000 0000</span>
+      <div class="flex_name_date_preview">
+        <span id="name-preview" >Jane Appleseed</span>
+        <div class="month_year">
+          <span id="month-preview">00</span>
+          /
+          <span id="year-preview">00</span>
+        </div>
+      </div>
+      <span id="cvv-preview">000</span>
+    </div>
+    <img id="card-front" src="assets/images/bg-card-front.png" alt="Card Front">
+    <img id="card-back" src="assets/images/bg-card-back.png" alt="Card Back">
+  </section>
+  <form class="card_information">
+    <div class="div_card_name">
+      <label for="card-name">Cardholder Name</label>
+      <input type="text" name="card-name" id="card-name" placeholder="e.g. Jane Appleseed">
+      <div class="error">
+        <span>Enter the cardholder's name</span>
+      </div>
+    </div>
+    <div class="div_card_number">
+      <label for="card-number">Card Number</label>
+      <input type="text" name="card-number" id="card-number" placeholder=" e.g. 1234 5678 9123 0000">
+      <div class="error">
+        <span>Wrong format, numbers only</span>
+      </div>
+    </div>
+    <div class="div_date_card_cvv">
+      <div class="exp_date">
+        <label for="date-month">Exp. Date (MM/YY)</label>
+        <div>
+          <input type="number" name="date-month" id="card-month" placeholder="MM">
+          <input type="number" name="date-year" id="card-year" placeholder="YY">
+        </div>
+        <div class="error">
+          <span>Can't be blank</span>
+        </div>
+        <div class="error">
+          <span>Invalid month</span>
+        </div>
+      </div>
+      <div class="cvv">
+        <label for="card-cvv">CVC</label>
+        <div>
+          <input type="number" name="card-cvv" id="card-cvv" placeholder="e.g. 123">
+        </div>
+        <div class="error">
+          <span>Can't be blank</span>
+        </div>
+      </div>
+    </div>
+    <input id="confirm-btn" type="button" value="Confirm">
+  </form>
+  <section class="thanks">
+    <img src="assets/images/icon-complete.svg" alt="Check Icon">
+    <h1>Thank You!</h1>
+    <p>We've added your card details</p>
+    <input id="continue-btn" type="button" value="Continue">
+  </section>
+  <footer class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io/profile/jvssvj" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-62b518263/" target="_blank">João Vitor</a></p>
+  </footer>
+</body>
+</html>
